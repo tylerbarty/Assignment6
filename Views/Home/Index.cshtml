@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Books For Sale!";
+}
+@model IQueryable<Project>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Book ID Number</th>
+            <th>Book Title</th>
+            <th>Author Last Name</th>
+            <th>Author First Name</th>
+            <th>Publisher</th>
+            <th>Classification</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>ISBN</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <th>@x.BookId</th>
+                <th>@x.Title</th>
+                <th>@x.AuthorLName</th>
+                <th>@x.AuthorFName</th>
+                <th>@x.Publisher</th>
+                <th>@x.Classification</th>
+                <th>@x.Category</th>
+                <th>$@x.Price</th>
+                <th>@x.ISBN</th>
+            </tr>
+        }
+    </tbody>
+    
+</table>
+
+<p>All books come with a no questions return window of 30 seconds. Any longer amount of time, and you best believe that we're going to ask a whole bunch of freaking questions ;)</p>
