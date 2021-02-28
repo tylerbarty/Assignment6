@@ -2,7 +2,7 @@
 
 namespace Assignment5.Migrations
 {
-    public partial class Inital : Migration
+    public partial class NextMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,7 +19,8 @@ namespace Assignment5.Migrations
                     Publisher = table.Column<string>(nullable: false),
                     Classification = table.Column<string>(nullable: false),
                     Category = table.Column<string>(nullable: false),
-                    Price = table.Column<float>(nullable: false)
+                    Price = table.Column<float>(nullable: false),
+                    PageNum = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

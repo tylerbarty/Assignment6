@@ -32,7 +32,8 @@ namespace Assignment5.Models
                         Publisher = "Signet",
                         Classification = "Non-Fiction",
                         Category = "Classic",
-                        Price = 9.95F
+                        Price = 9.95F,
+                        PageNum = 1488
                     },
                     new Project
                     {
@@ -43,7 +44,9 @@ namespace Assignment5.Models
                         Publisher = "Simon & Schuster",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 14.58F
+                        Price = 14.58F,
+                        PageNum = 944
+
                     },
                     new Project
                     {
@@ -54,7 +57,8 @@ namespace Assignment5.Models
                         Publisher = "Bantam",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 21.54F
+                        Price = 21.54F,
+                        PageNum = 832
                     },
                     new Project
                     {
@@ -65,7 +69,8 @@ namespace Assignment5.Models
                         Publisher = "Random House",
                         Classification = "Non-Fiction",
                         Category = "Biography",
-                        Price = 11.61F
+                        Price = 11.61F,
+                        PageNum = 864
                     },
                     new Project
                     {
@@ -76,7 +81,8 @@ namespace Assignment5.Models
                         Publisher = "Random House",
                         Classification = "Non-Fiction",
                         Category = "Historical",
-                        Price = 13.33F
+                        Price = 13.33F,
+                        PageNum = 528
                     },
                     new Project
                     {
@@ -87,7 +93,8 @@ namespace Assignment5.Models
                         Publisher = "Vintage",
                         Classification = "Fiction",
                         Category = "Historical Fiction",
-                        Price = 15.95F
+                        Price = 15.95F,
+                        PageNum = 288
                     },
                     new Project
                     {
@@ -98,7 +105,8 @@ namespace Assignment5.Models
                         Publisher = "Grand Central Publishing",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 14.99F
+                        Price = 14.99F,
+                        PageNum = 304
                     },
                     new Project
                     {
@@ -109,7 +117,8 @@ namespace Assignment5.Models
                         Publisher = "Grand Central Publishing",
                         Classification = "Non-Fiction",
                         Category = "Self-Help",
-                        Price = 29.66F
+                        Price = 29.66F,
+                        PageNum = 240
                     },
                     new Project
                     {
@@ -120,7 +129,8 @@ namespace Assignment5.Models
                         Publisher = "Portfolio",
                         Classification = "Non-Fiction",
                         Category = "Buisness",
-                        Price = 29.16F
+                        Price = 29.16F,
+                        PageNum = 400
                     },
                     new Project
                     {
@@ -131,8 +141,46 @@ namespace Assignment5.Models
                         Publisher = "Bantam",
                         Classification = "Fiction",
                         Category = "Thrillers",
-                        Price = 15.03F
+                        Price = 15.03F,
+                        PageNum = 642
+                    },
+                    new Project
+                    {
+                        ISBN = "978-0465062881",
+                        Title = "Endurance",
+                        AuthorFName = "Alfred",
+                        AuthorLName = "Lansing",
+                        Publisher = "Basic Books",
+                        Classification = "Non-Fiction",
+                        Category = "Historical",
+                        Price = 14.97F,
+                        PageNum = 357
+                    },
+                    new Project
+                    {
+                        ISBN = "978-0553393613",
+                        Title = "Misbehaving",
+                        AuthorFName = "Richard",
+                        AuthorLName = "Thaler",
+                        Publisher = "W.W. Norton & Company",
+                        Classification = "Non-Fiction",
+                        Category = "Economic History",
+                        Price = 14.47F,
+                        PageNum = 432
+                    },
+                    new Project
+                    {
+                        ISBN = "978-0553393613",
+                        Title = "Ready Player One",
+                        AuthorFName = "Ernest",
+                        AuthorLName = "Cline",
+                        Publisher = "Ballentine Books",
+                        Classification = "Fiction",
+                        Category = "Thrillers",
+                        Price = 12.78F,
+                        PageNum = 384
                     }
+
 
                 );
 
