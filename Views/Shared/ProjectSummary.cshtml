@@ -1,0 +1,15 @@
+﻿
+@model Project 
+
+<!-- this page turns the entire line of books into a seperate object for cleaner Index.cshtml page-->
+<tr>
+    <th>@Model.BookId</th>
+    <th>@Model.Title</th>
+    <th>@Model.AuthorLName</th>
+    <th>@Model.AuthorFName</th>
+    <th>@Model.Publisher</th>
+    <th>@Model.Classification</th>
+    <th>@Model.Category</th>
+    <th>$@Model.Price</th>
+    <th>@Model.ISBN</th>
+</tr>

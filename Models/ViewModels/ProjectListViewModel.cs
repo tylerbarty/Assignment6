@@ -10,6 +10,9 @@ namespace Assignment6.Models.ViewModels
     {
         public IEnumerable<Project> Projects { get; set; }
         public PagingInfo PagingInfo { get; set;  }
+
+        // allows for organizng books by category (Historical, Self Help, etc)
+        public string Type { get; set; }
     }
 }
 
