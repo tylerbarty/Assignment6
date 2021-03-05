@@ -44,6 +44,8 @@ namespace Assignment6.Infrastructure
 
             TagBuilder result = new TagBuilder("div");
 
+
+            // building A tags for html page numbers
             for (int i = 1; i <= PageModel.TotalPages; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
