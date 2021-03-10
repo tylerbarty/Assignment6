@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assignment5.Models
+namespace Booksite.Models
 {
-    public class Project
+    public class Book
     {   
         [Key]
         public int BookId { get; set; }

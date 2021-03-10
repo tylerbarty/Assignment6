@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assignment6.Models.ViewModels
+namespace Booksite.Models.ViewModels
 {
     public class PagingInfo
     {

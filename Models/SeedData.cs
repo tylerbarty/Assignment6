@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace Assignment5.Models
+namespace Booksite.Models
 {
     public class SeedData
     {
@@ -20,10 +20,10 @@ namespace Assignment5.Models
                 context.Database.Migrate();
             }
 
-            if (!context.Projects.Any())
+            if (!context.Books.Any())
             {
-                context.Projects.AddRange(
-                    new Project
+                context.Books.AddRange(
+                    new Book
                     {
                         ISBN = "978-0451419439",
                         Title = "Les Miserables",
@@ -35,7 +35,7 @@ namespace Assignment5.Models
                         Price = 9.95F,
                         PageNum = 1488
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0743270755",
                         Title = "Team of Rivals",
@@ -48,7 +48,7 @@ namespace Assignment5.Models
                         PageNum = 944
 
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0553384611",
                         Title = "The Snowball",
@@ -60,7 +60,7 @@ namespace Assignment5.Models
                         Price = 21.54F,
                         PageNum = 832
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0812981254",
                         Title = "American Ulysses",
@@ -72,7 +72,7 @@ namespace Assignment5.Models
                         Price = 11.61F,
                         PageNum = 864
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0812974492",
                         Title = "Unbroken",
@@ -84,7 +84,7 @@ namespace Assignment5.Models
                         Price = 13.33F,
                         PageNum = 528
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0804171281",
                         Title = "The Great Train Robbery",
@@ -96,7 +96,7 @@ namespace Assignment5.Models
                         Price = 15.95F,
                         PageNum = 288
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-1455586691",
                         Title = "Deep Work",
@@ -108,7 +108,7 @@ namespace Assignment5.Models
                         Price = 14.99F,
                         PageNum = 304
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-1455523023",
                         Title = "It's Your Ship",
@@ -120,7 +120,7 @@ namespace Assignment5.Models
                         Price = 29.66F,
                         PageNum = 240
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-1591847984 ",
                         Title = "The Virgin Way",
@@ -132,7 +132,7 @@ namespace Assignment5.Models
                         Price = 29.16F,
                         PageNum = 400
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0553393613",
                         Title = "Sycamore Row",
@@ -144,7 +144,7 @@ namespace Assignment5.Models
                         Price = 15.03F,
                         PageNum = 642
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0465062881",
                         Title = "Endurance",
@@ -156,7 +156,7 @@ namespace Assignment5.Models
                         Price = 14.97F,
                         PageNum = 357
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0553393613",
                         Title = "Misbehaving",
@@ -168,7 +168,7 @@ namespace Assignment5.Models
                         Price = 14.47F,
                         PageNum = 432
                     },
-                    new Project
+                    new Book
                     {
                         ISBN = "978-0553393613",
                         Title = "Ready Player One",

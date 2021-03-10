@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Assignment5.Models;
-using Assignment5.Controllers;
+using Booksite.Models;
+using Booksite.Controllers;
 
 namespace Assignment6.Components
 {
@@ -23,7 +23,7 @@ namespace Assignment6.Components
             ViewBag.SelectedType = RouteData?.Values["category"];
 
 
-            return View(repository.Projects
+            return View(repository.Books
                 .Select( x => x.Category)
                 .Distinct()
                 .OrderBy(x => x));

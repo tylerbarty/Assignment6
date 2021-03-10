@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Assignment5.Models;
+using Booksite.Models;
 
-namespace Assignment5.Controllers
+namespace Booksite.Models
 {
     public class EFBookRepository : IBookRepository
     {
@@ -15,7 +15,7 @@ namespace Assignment5.Controllers
         {
             _context = context;
         }
-        public IQueryable<Project> Projects => _context.Projects;
+        public IQueryable<Book> Books => _context.Books;
 
     }
 }

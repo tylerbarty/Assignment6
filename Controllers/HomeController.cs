@@ -1,5 +1,5 @@
-﻿using Assignment5.Models;
-using Assignment6.Models.ViewModels;
+﻿using Booksite.Models;
+using Booksite.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,7 +8,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Assignment5.Controllers
+namespace Booksite.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,24 +23,24 @@ namespace Assignment5.Controllers
             _repository = repository;
         }
 
-        public IActionResult Index(string category, int page = 1)
+        public IActionResult Index(string category, int pageNum = 1)
         {
             return View(new ProjectListViewModel
             {
                 // this creates the list of books that are to be loaded on the page
-                Projects = _repository.Projects
+                Books = _repository.Books
                     .Where(p => category == null || p.Category == category)
                     .OrderBy(p => p.BookId)
-                    .Skip((page - 1) * PageSize)
+                    .Skip((pageNum - 1) * PageSize)
                     .Take(PageSize),
 
                 //this does the page render stuff
                 PagingInfo = new PagingInfo
                 {
-                    CurrentPage = page,
+                    CurrentPage = pageNum,
                     ItemsPerPage = PageSize,
-                    TotalNumItems = category == null ? _repository.Projects.Count() :
-                            _repository.Projects.Where(x => x.Category == category).Count()
+                    TotalNumItems = category == null ? _repository.Books.Count() :
+                            _repository.Books.Where(x => x.Category == category).Count()
                 },
                 Type = category
             });

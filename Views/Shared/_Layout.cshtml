@@ -6,38 +6,53 @@
     <title>@ViewData["Title"] - Assignment5</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link href="/lib/font-awesome/css/all.min.css" rel="stylesheet" />
 </head>
-<div class="view" style="background-image: url(https://images.freecreatives.com/wp-content/uploads/2016/02/Awesome-Blue-Gradient-background-For-You.jpg);
-        background-repeat: no-repeat;
-        background-size:cover;
-        background-position: center center;">
-    <body>
-        <div class=" text-white bg-dark">
-            <span class="navbar-brand ml-2">freakingbooksales.com</span>
-        </div>
-        <div class="row m-1 p-1">
-            <div id="blah" class="col-3">
-                <h1>Best Freaking Price on Books Ever</h1>
-                <vc:navigation-menu />
-                <br /><br />
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="~/girl reading.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h9>Did You Know?</h9>
-                        <p class="card-text">The word library comes from Latin liber – the inner bark of trees – and was first used in written form in the 14th century.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-9">
-                @RenderBody()
-            </div>
-            <div class="jumbotron jumbotron-fluid col-12">
-                <div class="container">
-                    <h1 class="display-4">Need Help?</h1>
-                    <p class="lead">A team of experts are standing by to help you with any questions that you may find, so long as you can find one of their phone numbers</p>
-                </div>
-            </div>
 
+     <!-- Background set in body tag-->
+<body class="view" style="background-image: url(https://wallpapercave.com/wp/fto5lYX.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;">
+
+    <!--Nav Bar (on top)-->
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">BOOK STORE</div>
+                <div class="col-6 text-right">
+                    <vc:cart-summary />
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+
+    <!-- Nav Section (to the left) -->
+    <div class="row m-1 p-1">
+        <div id="blah" class="col-3">
+            <h1>Best Freaking Price on Books Ever</h1>
+            <vc:navigation-menu />
+            <br /><br />
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="~/girl reading.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h9>Did You Know?</h9>
+                    <p class="card-text">The word library comes from Latin liber – the inner bark of trees – and was first used in written form in the 14th century.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-9">
+            @RenderBody()
+        </div>
+
+        <!-- Banner on the Bottom -->
+        <div class="jumbotron jumbotron-fluid col-12">
+            <div class="container">
+                <h1 class="display-4">Need Help?</h1>
+                <p class="lead">A team of experts are standing by to help you with any questions that you may find, so long as you can find one of their phone numbers</p>
+            </div>
+        </div>
+
+    </div>
+</body>
 </html>

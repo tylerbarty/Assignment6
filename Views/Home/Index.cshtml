@@ -19,9 +19,9 @@
             </thead>
             <tbody>
                 <!-- renders all book info in the table -->
-                @foreach (var x in Model.Projects)
+                @foreach (var x in Model.Books)
                 {
-                    <partial name="ProjectSummary" model="x" />
+                    <partial name="BookSummary" model="x" />
                 }
             </tbody>
 

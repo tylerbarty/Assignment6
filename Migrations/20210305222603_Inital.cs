@@ -1,17 +1,17 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Assignment5.Migrations
+namespace Booksite.Migrations
 {
-    public partial class NextMigration : Migration
+    public partial class Inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Projects",
+                name: "Books",
                 columns: table => new
                 {
                     BookId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     ISBN = table.Column<string>(nullable: false),
                     Title = table.Column<string>(nullable: false),
                     AuthorFName = table.Column<string>(nullable: false),
@@ -24,14 +24,14 @@ namespace Assignment5.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Projects", x => x.BookId);
+                    table.PrimaryKey("PK_Books", x => x.BookId);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Projects");
+                name: "Books");
         }
     }
 }

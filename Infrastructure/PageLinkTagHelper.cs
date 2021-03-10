@@ -7,9 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Assignment6.Models.ViewModels;
+using Booksite.Models.ViewModels;
 
-namespace Assignment6.Infrastructure
+namespace Booksite.Infrastructure
 {
     [HtmlTargetElement("div", Attributes = "page-model")]
     public class PageLinkTagHelper : TagHelper
@@ -28,7 +28,6 @@ namespace Assignment6.Infrastructure
         public string PageAction { get; set; }
 
         //Added for getting a dictionary into to add sections at a time
-
         [HtmlAttributeName(DictionaryAttributePrefix = "page-url-")]
         public Dictionary<string, object> PageUrlValues { get; set; } = new Dictionary<string, object>();
 
@@ -48,17 +47,17 @@ namespace Assignment6.Infrastructure
             // building A tags for html page numbers
             for (int i = 1; i <= PageModel.TotalPages; i++)
             {
+                PageUrlValues["pageNum"] = i;
                 TagBuilder tag = new TagBuilder("a");
-                tag.Attributes["href"] = urlHelper.Action(PageAction, new { page = i });
+                tag.Attributes["href"] = urlHelper.Action(PageAction, 
+                    PageUrlValues);
 
                 if (PageclassesEnabled)
                 {
                     tag.AddCssClass(PageClass);
                     tag.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal);
                 }
-
                 tag.InnerHtml.Append(i.ToString());
-
                 result.InnerHtml.AppendHtml(tag);
             }
             output.Content.AppendHtml(result.InnerHtml);
